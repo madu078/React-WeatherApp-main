@@ -40,10 +40,12 @@ export default function Weather() {
             {!error && response.current && (
                 <div className="weather">
                     <img src={response.current.condition.icon} className="weather-icon" alt="weather icon" />
-                    <h3 className="textsample">{response.current.condition.text}</h3>
-                    <h1 className="temp">{`${response.current.temp_c}°C`}</h1>
-                    <h2 className="city">{response.location.name}</h2>
-                    <h2 className="country">{response.location.country}</h2>
+                    <h3 >{response.current.condition.text}</h3>
+                    <h1 >{`${response.current.temp_c}°C`}</h1>
+                    <h2 >City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;: &nbsp;{response.location.name}</h2>
+                    <h2 >Province&nbsp;:&nbsp; {response.location.region}</h2>
+                    <h2 >Country &nbsp;&nbsp;&nbsp;: &nbsp;{response.location.country}</h2>
                     
 
                     <div className="details">
